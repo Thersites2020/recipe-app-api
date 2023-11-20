@@ -2,7 +2,7 @@ from django.contrib.auth import (
     get_user_model,
     authenticate,
 )
-# from django.utils.translation import gettext as _
+from django.utils.translation import gettext as _
 
 from rest_framework import serializers
 
@@ -43,7 +43,7 @@ class AuthtokenSerializer(serializers.Serializer):
             password=password,
         )
         if not user:
-            msg = ('Could not authenticate user with given credentials.')
+            msg = _('Could not authenticate user with given credentials.')
             raise serializers.ValidationError(msg, code='authorization')
 
         attrs['user'] = user

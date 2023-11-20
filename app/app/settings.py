@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     # Mine!
     'core',
     'user',
+    'recipe',
     # Third Party
     'rest_framework',
     'rest_framework.authtoken',
